@@ -43,7 +43,7 @@ represent optimal design vector, the corresponding cost function value and
 violation amount.
 
 ### Results
-```python
+```
 iteration = 1    ----- cost = 13078551.025196 ----- violation = 37.081199 
 iteration = 2    ----- cost = 14338541.070713 ----- violation = 8.968533  
 iteration = 3    ----- cost = 17331301.240654 ----- violation = 1.363611  
