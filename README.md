@@ -33,7 +33,9 @@ be within the following limits: <br />60 (mm) &lt;= *w* &lt;=300 (mm)
 ### About code
 This code is mainly developed to solve the aforementioned problem.
 Gradients of the objective and constraint functions is required and I've 
-used finite difference approximations to evaluate them.
+used finite difference approximations to evaluate them. In each step of SLP
+a linear optimization problem must be solved. `linprog` was used for this purpose.
+
 
 ### Example
 ```python
@@ -41,3 +43,8 @@ pr = Problem()
 opt = SLPOptimization()
 x,f,viol = opt.run_SLP(pr,100,17)
 ```
+Here, `pr` and `opt` is an instance of `Problem` and
+`SLPOptimization` class, respectively. `run_SLP` method starts
+SLP algorithm with initial guess `w = 100` and `t=17`. `x`, `f` and `viol`
+represent optimal design vector, the corresponding cost function value and
+violation amount.
