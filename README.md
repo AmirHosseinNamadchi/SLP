@@ -30,18 +30,11 @@ be within the following limits: <br />60 (mm) &lt;= *w* &lt;=300 (mm)
 * numpy
 * scipy
 
-### About code
-This code is mainly developed to solve the aforementioned problem.
-Gradients of the objective and constraint functions is required and I've 
-used finite difference approximations to evaluate them. In each step of SLP
-a linear optimization problem must be solved. `linprog` was used for this purpose.
-
-
 ### Example
 ```python
 pr = Problem()
 opt = SLPOptimization()
-x,f,viol = opt.run_SLP(pr, 100, 17)
+x,f,viol = opt.run_SLP(pr,100,17)
 ```
 Here, `pr` and `opt` is an instance of `Problem` and
 `SLPOptimization` class, respectively. `run_SLP` method starts
@@ -60,3 +53,11 @@ iteration = 6    ----- cost = 18475208.595235 ----- violation = 0.000000
 SLP terminated at iteration 6
 w=145.308376, t=18.163547, Weight=18475208.595235
 ```
+
+### About code
+This code is mainly developed to solve the aforementioned problem.
+Gradients of the objective and constraint functions is required and I've 
+used finite difference approximations to evaluate them. In each step of SLP
+a linear optimization problem must be solved. `linprog` was used for this purpose.
+
+*Amir Hossein Namadchi, February 2017*
