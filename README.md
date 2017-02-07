@@ -41,10 +41,22 @@ a linear optimization problem must be solved. `linprog` was used for this purpos
 ```python
 pr = Problem()
 opt = SLPOptimization()
-x,f,viol = opt.run_SLP(pr,100,17)
+x,f,viol = opt.run_SLP(pr, 100, 17)
 ```
 Here, `pr` and `opt` is an instance of `Problem` and
 `SLPOptimization` class, respectively. `run_SLP` method starts
 SLP algorithm with initial guess `w = 100` and `t=17`. `x`, `f` and `viol`
 represent optimal design vector, the corresponding cost function value and
 violation amount.
+
+### Results
+```python
+iteration = 1    ----- cost = 13078551.025196 ----- violation = 37.081199 
+iteration = 2    ----- cost = 14338541.070713 ----- violation = 8.968533  
+iteration = 3    ----- cost = 17331301.240654 ----- violation = 1.363611  
+iteration = 4    ----- cost = 18386760.232021 ----- violation = 0.096440  
+iteration = 5    ----- cost = 18474679.338877 ----- violation = 0.000573  
+iteration = 6    ----- cost = 18475208.595235 ----- violation = 0.000000  
+SLP terminated at iteration 6
+w=145.308376, t=18.163547, Weight=18475208.595235
+```
